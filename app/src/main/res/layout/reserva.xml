@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dip"
+    android:background="#66CC33" >
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <TextView
+            android:id="@+id/textoCabeceraReserva"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Reserva"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:paddingBottom="10dip"
+            android:layout_alignParentTop="true" />
+        <TextView
+            android:id="@+id/textoTiempoReserva"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Elije una hora:"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:paddingBottom="5dip"
+            android:layout_below="@id/textoCabeceraReserva" />
+        <TimePicker
+            android:id="@+id/timePicker1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="10dip"
+            android:layout_below="@id/textoTiempoReserva"  />
+
+        <TextView
+            android:id="@+id/textoFechaReserva"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Elije una fecha:"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:paddingBottom="2dip"
+            android:layout_below="@id/timePicker1"  />
+        <TextView
+            android:id="@+id/textoFechaReserva2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="* Solo en caso de no ser para hoy "
+            android:textColor="#000000"
+            android:textStyle="italic"
+            android:textSize="10sp"
+            android:paddingBottom="5dip"
+            android:layout_below="@id/textoFechaReserva" />
+        <Button
+            android:id="@+id/botonReserva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="RESERVAR"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+
+        <TableLayout
+            android:id="@+id/tabla"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:stretchColumns="*"
+            android:layout_above="@id/botonReserva"  >
+            <TableRow >
+                <TextView
+                    android:id="@+id/textoNombreReserva"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A nombre de:"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"/>
+                <TextView
+                    android:id="@+id/textoNumeroReserva"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Para cuantos?"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"/>
+            </TableRow>
+            <TableRow >
+                <EditText
+                    android:id="@+id/editTextView1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true">
+
+                    <requestFocus />
+                </EditText>
+                <EditText
+                    android:id="@+id/editTextView2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true" >
+                    <requestFocus />
+                </EditText>
+            </TableRow>
+        </TableLayout>
+        <Button
+            android:id="@+id/botonFechaReserva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Calendario"
+            android:paddingBottom="10dip"
+            android:layout_above="@id/tabla"
+            android:layout_centerHorizontal="true" />
+
+
+    </RelativeLayout>
+</LinearLayout>

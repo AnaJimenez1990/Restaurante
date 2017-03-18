@@ -42,7 +42,7 @@
                 android:textSize="15sp"
                 android:textColor="#FFFFFF"
 
-                android:text="@string/hist" />
+                android:text="teja_rio" />
         </ScrollView>
     </RelativeLayout>
 </FrameLayout>
